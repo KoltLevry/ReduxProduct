@@ -14,6 +14,7 @@ export default defineConfig({
       'lessons': path.resolve(__dirname, 'src/components/pages/lessons'),
       'homeworks': path.resolve(__dirname, 'src/components/pages/homeworks'),
       'styles': path.resolve(__dirname, 'src/styles'),
+      'store': path.resolve(__dirname, 'src/store'),
     }
   },
   server: {

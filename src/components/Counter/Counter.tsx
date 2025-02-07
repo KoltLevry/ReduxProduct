@@ -1,30 +1,20 @@
 import Button from "../Button/Button";
-import { useState } from "react";
 import { CounterWrapper, ButtornWrapper, ResultContainer} from './styles'
+import { useAppDispatch, useAppSelector } from "store/hooks";
+import { counterActions, counterSelectors } from "store/redux/counter/counterSlice";
 
 function Counter() {
-  const [counter, setCounter] = useState<number>(0);
 
-  const onPlusClick = (): void => {
-    setCounter((prevValue) => {
-      return prevValue + 1;
-    });
-  };
-
-  console.log("counter in Counter Component", counter);
-
-  const onMinusClick = (): void => {
-    setCounter((prevValue) => prevValue - 1);
-  };
+  const counter = useAppSelector(counterSelectors.count)
 
   return (
     <CounterWrapper>
       <ButtornWrapper>
-        <Button name="-" type="button" onClick={onMinusClick} />
+        <Button name="-" type="button" onClick={()=>{}} />
       </ButtornWrapper>
       <ResultContainer>{counter}</ResultContainer>
       <ButtornWrapper>
-        <Button name="+" type="button" onClick={onPlusClick} />
+        <Button name="+" type="button" onClick={()=>{}} />
       </ButtornWrapper>
     </CounterWrapper>
   );

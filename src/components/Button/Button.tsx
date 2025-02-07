@@ -8,8 +8,8 @@ function Button({ name = "SEND", type, onClick, disabled = false, variant, isTog
       type={type} 
       onClick={onClick} 
       disabled={disabled}
-      variant={variant}
-      isToggled={isToggled}
+      // variant={variant}
+      // isToggled={isToggled}
       >
       {name}
       
