@@ -1,21 +1,19 @@
+import { ErrorMessage, InputContainer, InputElement, Label } from "./styles";
 import { InputProps } from './types'
-import { InputContainer, InputElement, StyledLabel } from './styles'
 
-function Input({ 
-      name, 
-      type = 'text',
-       placeholder, 
-       label, 
-       id, 
-       value, 
-       onChange, 
-       min,
-       max,
-       
-      }: InputProps) {
+function Input({
+  name,
+  type = 'text',
+  placeholder,
+  label,
+  id,
+  value,
+  onChange,
+  error
+}: InputProps) {
   return (
     <InputContainer>
-      {label && <StyledLabel htmlFor={id}>{label}</StyledLabel>} 
+      {label && <Label htmlFor={id}>{label}</Label>}
       <InputElement
         name={name}
         id={id}
@@ -23,11 +21,12 @@ function Input({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        min={type === "number" ? min : undefined}
-        max={type === "number" ? max : undefined}
       />
+      <ErrorMessage>{error}</ErrorMessage>
     </InputContainer>
   );
 }
 
 export default Input;
+
+

@@ -1,3 +1,3 @@
 export interface CounterStateSlice {
-    counterValue: number;
+  count: number
 }

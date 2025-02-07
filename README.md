@@ -1,27 +1,70 @@
-# vite-template-redux
+# Об'єкт
+Об'єкт - це колекція властивостей, де кожна властивість складається з пари "ключ-значення". Ою'єки можуть мати різні типи даних, включаючи числа, рядки, масиви, функції та інші об'єкти. Наприклад: 
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
-
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+```
+const person = {
+    name: "Ivan",
+    age: 30,
+    greet: function() {console.log('Hi! My name is ' + this.name)}
+}
 ```
 
-## Goals
+## У React об'єкти часто використовуються для зберігання стану компонентів, а також для передачі параметрів між компонентами. 
 
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
+1) Що таке компоненти?
+Компоненти в React — це незалежні, повторно використовувані частини коду, які описують частину інтерфейсу користувача. Кожен компонент може мати свій власний стан і логіку, а також може приймати параметри (props) від батьківських компонентів. Компоненти можуть бути класовими або функціональними.
 
-## Scripts
+- Приклад функціонального компонента:
+```
+const Greeting = () => {
+    return <h1>Hello, World~!</h1>
+}
+```
 
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
+## 
+2) Що таке стан компонентів?
+Стан (state) компонента — це об'єкт, який зберігає дані, що можуть змінюватися впродовж життя компонента. Зміна стану призводить до повторного рендерингу компонента, що дозволяє інтерфейсу користувача відображати актуальну інформацію.
 
-## Inspiration
+Приклад використання стану:
+```
+import React, { useState } from "react";
 
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+const Counter = () => {
+  const [count, setCount] = useState(0); // Ініціалізуємо стан
+
+  return (
+    <div>
+      <p>Кількість: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Збільшити</button>
+    </div>
+  );
+};
+```
+
+3) Що таке параметри компонентів?
+Параметри компонентів (props) — це об'єкти, які передаються в компонент з батьківського компонента. Вони дозволяють передавати дані та функції між компонентами, що робить їх динамічними та гнучкими.
+
+Приклад передачі props:
+```
+const Welcome = ({ name }) => {
+  return <h1>Привіт, {name}!</h1>;
+};
+
+// Використання компонента Welcome з props
+<Welcome name="Олексій" />
+```
+4) До чого тут props?
+props (скорочення від **"properties"**) — це механізм, за допомогою якого батьківські компоненти передають дані дочірнім компонентам. Вони є незмінними (read-only) для дочірніх компонентів, що означає, що дочірні компоненти не можуть змінювати props, які вони отримують.
+
+props дозволяють створювати динамічні компоненти, які можуть реагувати на зміни даних, переданих з батьківських компонентів. *Це важлива частина архітектури React, оскільки вона допомагає підтримувати односторонній потік даних.*
+
+**Підсумок**
+* Компоненти — це основні будівельні блоки інтерфейсу в React.
+* Стан — це дані, які можуть змінюватися в компоненті і впливають на його рендеринг.
+* Параметри (props) — це дані, які передаються в компоненти з батьківських компонентів.
+* Props забезпечують зв'язок між компонентами, дозволяючи їм взаємодіяти та обмінюватися інформацією.
+
+# Layout 
+Layout (макет) — це структура або схема, яка визначає, як компоненти будуть організовані на сторінці. Layout компоненти зазвичай використовуються для створення загальної структури інтерфейсу користувача, включаючи такі елементи, як заголовки, бокові панелі, основний контент, футери 
+
+Таким чином, об'єкти використовуються для зберігання даних, а layout компоненти допомагають організувати ці дані в зручну для користувача структуру.

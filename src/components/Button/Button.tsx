@@ -1,18 +1,23 @@
 import { ButtonProps } from "./types";
 import { MainButton } from "./styles";
+// import {Event} from 'react';
 
-function Button({ name = "SEND", type, onClick, disabled = false, variant, isToggled }: ButtonProps) {
+// interface ButtonProps {
+//   name?: string,
+//   type: 'submit' | 'button' | 'reset',
+//   onClick: () => void
+// }
 
+function Button({
+  name = "SEND",
+  type = "button",
+  onClick,
+  disabled = false,
+  isRed = false,
+}: ButtonProps) {
   return (
-    <MainButton 
-      type={type} 
-      onClick={onClick} 
-      disabled={disabled}
-      // variant={variant}
-      // isToggled={isToggled}
-      >
+    <MainButton type={type} onClick={onClick} disabled={disabled} $isRed={isRed}>
       {name}
-      
     </MainButton>
   );
 }

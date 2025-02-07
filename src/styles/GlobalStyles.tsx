@@ -1,5 +1,5 @@
 import { Global, css } from "@emotion/react";
-// Global = a global component from react
+
 const globalStyles = css`
   @import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
 
@@ -27,11 +27,11 @@ p {
 
 #root {
   display: flex;
-  flex-direction: column;
   min-height: 100%;
   font-family: Lato, sans-serif;
 }
 `
+
 function GlobalStyles() {
   return <Global styles={globalStyles} />
 }

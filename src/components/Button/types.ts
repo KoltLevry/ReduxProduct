@@ -3,6 +3,5 @@ export interface ButtonProps {
   type?: "submit" | "button" | "reset";
   onClick?: () => void;
   disabled?: boolean;
-  variant?: "primaryFirst" | "secondarySecond";
-  isToggled?: boolean;
+  isRed?: boolean;
 }
