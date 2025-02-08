@@ -48,7 +48,7 @@ function PhoneComponent() {
         </ButtonStorageValue>
         <ButtonStorageValue
           onClick={() => handleStorage(telephone.storage.big)}
-          on
+          
         >
           big
         </ButtonStorageValue>
