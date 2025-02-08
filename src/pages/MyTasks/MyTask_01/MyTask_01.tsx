@@ -1,3 +1,4 @@
+import PhoneComponent from './PhoneComponent/PhoneComponent';
 import {TaskWrapper} from './styles';
 
 function MyTask_01() {
@@ -5,6 +6,7 @@ function MyTask_01() {
         <>
             <TaskWrapper>
                 <h1>Hi Objects!</h1>
+                <PhoneComponent />
             </TaskWrapper>
         </>
     );
