@@ -8,6 +8,7 @@ padding: 10px;
 gap: 20px;
 width: 100%;
 height: 100%;
+/* flex-wrap: wrap; */
 `
 
 export const SideBar = styled.div`
@@ -24,6 +25,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 color: rgb(34, 69, 244);
 font-size: 18px;
 font-weight: bold;
+overflow-y: scroll;
 
 &:hover {
     cursor: pointer;
