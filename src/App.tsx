@@ -14,7 +14,7 @@ import MyTask_01 from 'pages/MyTasks/MyTask_01/MyTask_01'
 import MyTask_02 from 'pages/MyTasks/MyTask_02/MyTask_02'
 
 //homeworks
-import Homeworks from 'components/homeworks/homeworks'
+import Homeworks from 'components/homeworks/Homeworks'
 import Homework17 from 'components/homeworks/Homework17/Homework17'
 
 //consultations
