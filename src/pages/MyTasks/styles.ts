@@ -43,6 +43,4 @@ flex-direction: column;
 flex: 1;
 padding: 10px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-overflow-y: scroll;
-
 `
