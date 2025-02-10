@@ -6,11 +6,14 @@ import { v4 } from "uuid";
 import Spinner from "components/Spinner/Spinner";
 
 function RandomJokes() {
+
   const { data, error, status } = useAppSelector(randomJokesSelectors.jokeData)
   const dispatch = useAppDispatch();
+
   const jokes = data.map((joke) => {
     return <JokeText key={v4()}>{joke}</JokeText>
   })
+
   const getJoke = () => {
     dispatch(randomJokesActions.getJoke())
   }
