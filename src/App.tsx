@@ -12,7 +12,7 @@ import Users from 'pages/UsersApp/Users/Users'
 import MyTasks from 'pages/MyTasks/MyTasks'
 import MyTask_01 from 'pages/MyTasks/MyTask_01/MyTask_01'
 import MyTask_02 from 'pages/MyTasks/MyTask_02/MyTask_02'
-import Homework17 from 'homeworks/Homework17/Homework17'
+import Homework17 from 'components/homeworks/Homework17/Homework17'
 
 //homeworks
 
