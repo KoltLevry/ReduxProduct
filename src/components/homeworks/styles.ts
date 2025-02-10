@@ -8,7 +8,6 @@ padding: 10px;
 gap: 20px;
 width: 100%;
 height: 100%;
-/* flex-wrap: wrap; */
 `
 
 export const SideBar = styled.div`
@@ -43,6 +42,5 @@ flex-direction: column;
 flex: 1;
 padding: 10px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-overflow-y: scroll;
 
 `

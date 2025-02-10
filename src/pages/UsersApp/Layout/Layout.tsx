@@ -40,7 +40,7 @@ function Layout({ children }: LayoutProps) {
             style={({ isActive }) => ({textDecoration: isActive ? "underline" : "none",})} to="/lesson17">Lesson 17
           </StyledNavLink>
           <StyledNavLink
-            style={({ isActive }) => ({textDecoration: isActive ? "underline" : "none",})} to="/homework17">Homework 17
+            style={({ isActive }) => ({textDecoration: isActive ? "underline" : "none",})} to="/homeworks">Homeworks
           </StyledNavLink>
         </NavContainer> 
       </Header>

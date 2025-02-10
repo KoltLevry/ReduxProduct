@@ -12,9 +12,10 @@ import Users from 'pages/UsersApp/Users/Users'
 import MyTasks from 'pages/MyTasks/MyTasks'
 import MyTask_01 from 'pages/MyTasks/MyTask_01/MyTask_01'
 import MyTask_02 from 'pages/MyTasks/MyTask_02/MyTask_02'
-import Homework17 from 'components/homeworks/Homework17/Homework17'
 
 //homeworks
+import Homeworks from 'components/homeworks/homeworks'
+import Homework17 from 'components/homeworks/Homework17/Homework17'
 
 //consultations
 
@@ -30,10 +31,16 @@ const App = () => {
             <Route path='task_01' element={<MyTask_01/>}/>
             <Route path='task_02' element={<MyTask_02/>}/>
           </Route>
+
           <Route path='/' element={<Home/>}/>
           <Route path='/users' element={<Users/>}/>
           <Route path='/lesson17' element={<Lesson17/>}/>
-          <Route path='/homework17' element={<Homework17/>}/>
+
+          <Route path='/homeworks' element={<Homeworks/>}>
+            <Route path='homework17' element={<Homework17/>}/>
+            <Route path='homework18' element={<Homework17/>}/>
+          </Route>
+
           <Route path='*' element='Page not found'/>
         </Routes>
       </Layout>
