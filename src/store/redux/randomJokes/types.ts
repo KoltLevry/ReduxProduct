@@ -1,5 +1,5 @@
 export interface RandomJokesSliceState {
-    date: string[],
+    data: string[],
     error: undefined | any,
     status: 'default' | 'loading' | 'success' | 'error', 
 }
