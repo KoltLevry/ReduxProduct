@@ -1,10 +1,11 @@
+import AdviceRandomizer from "components/AdviceRandomizer/AdviceRandomizer";
 import { HomeworkWrapper } from "./styles";
 
 
 function Homework18() {
     return (
         <HomeworkWrapper>
-            Homework18
+            <AdviceRandomizer />
         </HomeworkWrapper>
     );
 }
