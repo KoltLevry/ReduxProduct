@@ -18,6 +18,7 @@ import Lesson18 from 'lessons/Lesson18/Lesson18'
 import Homeworks from 'components/homeworks/Homeworks'
 import Homework17 from 'components/homeworks/Homework17/Homework17'
 import Homework18 from 'components/homeworks/Homework18/Homework18'
+import MyTask_03 from 'pages/MyTasks/MyTask_03/MyTask_03'
 
 //consultations
 
@@ -34,6 +35,7 @@ const App = () => {
             <Route path='task_02' element={<MyTask_02/>}/>
             <Route path='lesson17' element={<Lesson17/>}/>
             <Route path='lesson18' element={<Lesson18/>}/>
+            <Route path='task_03' element={<MyTask_03/>}/>
           </Route>
 
           <Route path='/' element={<Home/>}/>
